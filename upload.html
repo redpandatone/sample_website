@@ -1,10 +1,28 @@
-<form class="box" method="post" action="" enctype="multipart/form-data">
-  <div class="box__input">
-    <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
-    <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
-    <button class="box__button" type="submit">Upload</button>
-  </div>
-  <div class="box__uploading">Uploading&hellip;</div>
-  <div class="box__success">Done!</div>
-  <div class="box__error">Error! <span></span>.</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    		<link rel="stylesheet" href="upload.css">
+    		<title>Sample for Upload</title>
+    	 <meta charset="utf-8">
+    </head>
+    <body>
+<div>
+  <form action="upload.php" method="POST">
+  <input type="file" multiple>
+  <p>Drag your files here or click in this area.</p>
+  <button type="submit">Upload</button>
 </form>
+</div>
+
+<script  src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script  src = "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('form input').change(function () {
+    $('form p').text(this.files.length + " file(s) selected");
+  });
+});
+</script>
+
+</body>
+</html>
