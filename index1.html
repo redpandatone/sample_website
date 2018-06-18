@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<link rel="stylesheet" href="style.css">
+		<title>Sample for Menu Design</title>
+	 <meta charset="utf-8">
+</head>
+<body>
+	<h3>Reseller</h3>
+	<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
+	<nav id="navigation">
+	  <ul>
+	    <li><a href="#"><i class="ion-ios-speedometer-outline"></i><span>Dashboard</span></a></li>
+	    <li><a href="#"><i class="ion-chatbubbles"></i><span>Support Requests</span></a></li>
+			<li><a href="#"><i class="ion-ios-pulse"></i><span>Devices</span></a></li>
+			<li class="dropdown" rel="3"><a href="#"><i class="ion-gear-a"></i><span>Actions AT&T</span>
+					<ul class="dropdown-3">
+            <li><a href="#"><i class="ion-document-text"></i><span>Bulk</span></a></li>
+						<li><a href="#"><i class="ion-gear-b"></i><span>Activate</span></a></li>
+	          <li><a href="#"><i class="ion-gear-b"></i><span>Cancel</span></a></li>
+						<li><a href="#"><i class="ion-gear-b"></i><span>Restore</span></a></li>
+						<li><a href="#"><i class="ion-gear-b"></i><span>Suspend</span></a></li>
+	        </ul></a></li>
+      <li class="dropdown" rel="5"><a href="#"><i class="ion-gear-a"></i><span>Actions T-Mobile</span>
+					<ul class="dropdown-5">
+						<li><a href="#"><i class="ion-gear-b"></i><span>Activate</span></a></li>
+	          <li><a href="#"><i class="ion-gear-b"></i><span>Cancel</span></a></li>
+						<li><a href="#"><i class="ion-gear-b"></i><span>Restore</span></a></li>
+						<li><a href="#"><i class="ion-gear-b"></i><span>Suspend</span></a></li>
+	        </ul></a></li>
+	    <li class="dropdown" rel="1"><a href="#"><i class="ion-email"></i><span>Reports</span>
+	        <ul class="dropdown-1">
+	          <li><a href="#"><i class="ion-email"></i><span>Data Usage Report</span></a></li>
+	          <li><a href="#"><i class="ion-email-unread"></i><span>Status report</span></a></li>
+	        </ul></a></li>
+	    <li class="dropdown" rel="2"><a href="#"><i class="ion-android-contacts"></i><span>Agents</span>
+	        <ul class="dropdown-2">
+	          <li><a href="#"><i class="ion-person"></i><span>Create an Agent</span></a></li>
+	          <li><a href="#"><i class="ion-android-contacts"></i><span>Edit Agents</span></a></li>
+					</ul></a></li>
+      <li class="dropdown" rel="4"><a href="#"><i class="ion-bag"></i><span>Wallet</span>
+    	    <ul class="dropdown-4">
+    	      <li><a href="#"><i class="ion-bag"></i><span>View Balance</span></a></li>
+    	      <li><a href="#"><i class="ion-bag"></i><span>Add Funds</span></a></li>
+            <li><a href="#"><i class="ion-card"></i><span>Update Credit Card</span></a></li>
+    			</ul></a></li>
+      <li><a href="#"><i class="ion-person"></i><span>Profile</span></a></li>
+	    <li><a href="#"><i class="ion-log-out"></i><span>Logout</span></a></li>
+	  </ul>
+	</nav>
+	<div id="wrapper"><span>Other samples:</span>
+     <div> <a href="upload.html">Upload</a> </div>
+  </div>
+
+	<script  src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script  src = "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script>
+	jQuery(document).ready(function($) {
+		$("li.dropdown").hover(function() {
+			var id = $(this).attr("rel");
+			$(this).toggleClass("active");
+			$("ul.dropdown-" + id).toggle("fade", 250);
+		});
+	});
+ </script>
+
+	</body>
+	</html>
